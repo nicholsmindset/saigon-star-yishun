@@ -7,41 +7,76 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/gallery-1.webp"
             alt="Saigon Star Yishun - Premium Nail Art Masterpiece"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-brand-dark/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-nude via-transparent to-black/30"></div>
+          {/* Enhanced gradient overlays for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
         </div>
-        
-        <div className="relative z-10 text-center px-6">
-          <span className="block text-white uppercase tracking-[0.5em] text-xs font-bold mb-6 drop-shadow-md">
+
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          {/* Premium Badge */}
+          <span className="inline-block text-white/90 uppercase tracking-[0.4em] text-sm md:text-base font-bold mb-8 px-6 py-3 border-2 border-white/30 backdrop-blur-sm bg-white/5 rounded-full">
             Premium Artistry • Yishun Street 22
           </span>
-          <h1 className="text-6xl md:text-9xl font-serif text-white mb-8 tracking-tight drop-shadow-lg">
-            Saigon <span className="italic text-brand-gold">Star</span>
+
+          {/* Main Heading - Much Larger */}
+          <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-serif text-white mb-6 tracking-tight leading-none">
+            Saigon <span className="italic text-brand-gold drop-shadow-[0_0_30px_rgba(197,165,114,0.5)]">Star</span>
           </h1>
-          <p className="text-white/95 max-w-xl mx-auto mb-10 text-lg font-light leading-relaxed drop-shadow-sm">
-            Where your nails become a canvas and your lashes find their perfect lift. <br />
-            Elevating beauty standards in the heart of Yishun.
+
+          {/* Tagline - Larger and More Prominent */}
+          <p className="text-white text-xl sm:text-2xl md:text-3xl max-w-4xl mx-auto mb-12 font-light leading-relaxed px-4" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,0.6)' }}>
+            Where your nails become a canvas and your lashes find their perfect lift.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/booking" className="bg-brand-gold text-white px-10 py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-brand-dark shadow-xl transition-all duration-300">
-              Book Appointment
+
+          <p className="text-white/80 text-lg md:text-xl mb-12 font-light" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8)' }}>
+            Elevating beauty standards in the heart of Yishun
+          </p>
+
+          {/* Larger, More Prominent CTAs */}
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <Link
+              to="/booking"
+              className="group relative bg-brand-gold text-white px-12 py-5 text-sm md:text-base uppercase tracking-[0.2em] font-bold hover:bg-white hover:text-brand-dark shadow-2xl transition-all duration-300 overflow-hidden"
+            >
+              <span className="relative z-10">Book Appointment</span>
+              <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              <span className="absolute inset-0 flex items-center justify-center text-brand-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">Book Appointment</span>
             </Link>
-            <Link to="/services" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">
+            <Link
+              to="/services"
+              className="bg-white/15 backdrop-blur-md border-2 border-white/40 text-white px-12 py-5 text-sm md:text-base uppercase tracking-[0.2em] font-bold hover:bg-white hover:text-brand-dark hover:border-white shadow-2xl transition-all duration-300"
+            >
               Our Services
             </Link>
           </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-white/70 text-sm">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>4.9★ Rating</span>
+            </div>
+            <div>•</div>
+            <div>800+ Happy Clients</div>
+            <div>•</div>
+            <div>6+ Years Excellence</div>
+          </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <div className="w-[1px] h-12 bg-white/40"></div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-white/60 text-xs uppercase tracking-widest">Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
         </div>
       </section>
 
