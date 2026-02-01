@@ -161,7 +161,7 @@ const Booking: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center text-brand-dark/40 text-[10px] uppercase tracking-widest font-bold">
-           Need help booking? Call us at <span className="text-brand-dark">+65 8888 1234</span>
+           Need help booking? Call us at <span className="text-brand-dark">+65 8292 6388</span>
         </div>
       </div>
     </div>
