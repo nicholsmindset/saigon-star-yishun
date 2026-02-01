@@ -27,10 +27,10 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass-effect shadow-sm py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg py-3' : 'bg-black/20 backdrop-blur-md py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-serif font-bold tracking-widest text-brand-dark flex items-center gap-2">
-          <span className="text-brand-gold italic">Saigon</span>
+        <Link to="/" className={`text-2xl font-serif font-bold tracking-widest flex items-center gap-2 transition-colors duration-300 ${isScrolled ? 'text-brand-dark' : 'text-white'}`}>
+          <span className="text-brand-gold italic drop-shadow-lg">Saigon</span>
           <span className="hidden sm:inline font-light text-sm uppercase tracking-[0.2em] pt-1">Star Yishun</span>
         </Link>
 
@@ -40,23 +40,29 @@ const Navbar: React.FC = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-xs uppercase tracking-[0.15em] font-medium transition-colors hover:text-brand-gold ${location.pathname === link.path ? 'text-brand-gold' : 'text-brand-dark'}`}
+              className={`text-xs uppercase tracking-[0.15em] font-medium transition-colors hover:text-brand-gold ${
+                location.pathname === link.path
+                  ? 'text-brand-gold'
+                  : isScrolled
+                    ? 'text-brand-dark'
+                    : 'text-white drop-shadow-md'
+              }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link to="/booking" className="bg-brand-gold text-white px-6 py-2.5 text-xs uppercase tracking-widest font-bold hover:bg-brand-dark transition-all duration-300">
+          <Link to="/booking" className="bg-brand-gold text-white px-6 py-2.5 text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-brand-dark border-2 border-brand-gold transition-all duration-300 shadow-lg">
             Book Now
           </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-brand-dark p-2"
+          className={`lg:hidden p-2 transition-colors duration-300 ${isScrolled ? 'text-brand-dark' : 'text-white'}`}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
       </div>
