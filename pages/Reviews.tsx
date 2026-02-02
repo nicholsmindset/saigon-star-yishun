@@ -81,7 +81,7 @@ const REVIEW_STATS = {
 
 const Reviews: React.FC = () => {
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6">
         {/* Header */}
         <header className="text-center mb-20">

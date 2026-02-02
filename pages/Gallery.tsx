@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
   const filtered = filter === 'All' ? PORTFOLIO_IMAGES : PORTFOLIO_IMAGES.filter(i => i.type === filter);
 
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6">
         <header className="text-center mb-16">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Visual Excellence</span>
@@ -66,12 +66,12 @@ const Gallery: React.FC = () => {
           <p className="text-brand-dark/50 max-w-xl mx-auto text-sm font-light mb-10">
             A selection of our most intricate nail art and transformative lash sets, handpicked to inspire your next look.
           </p>
-          <div className="flex flex-wrap justify-center gap-8 border-y border-brand-accent/30 py-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 border-y border-brand-accent/30 py-4">
              {types.map(t => (
-               <button 
+               <button
                 key={t}
                 onClick={() => setFilter(t)}
-                className={`text-[10px] uppercase tracking-[0.25em] font-bold transition-all duration-300 ${filter === t ? 'text-brand-gold scale-110' : 'text-brand-dark/40 hover:text-brand-dark'}`}
+                className={`text-[11px] sm:text-[10px] uppercase tracking-[0.25em] font-bold transition-all duration-300 py-3 px-4 min-h-[44px] ${filter === t ? 'text-brand-gold scale-110' : 'text-brand-dark/40 active:text-brand-dark'}`}
                >
                  {t}
                </button>

@@ -3,7 +3,7 @@ import { BUSINESS_CONFIG } from '../config/business';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6 max-w-4xl">
         <header className="text-center mb-16">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">
