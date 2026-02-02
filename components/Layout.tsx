@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg py-3' : 'bg-black/20 backdrop-blur-md py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 ${isMobileMenuOpen ? 'z-[70]' : 'z-50'} transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg py-3' : 'bg-black/20 backdrop-blur-md py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className={`text-2xl font-serif font-bold tracking-widest flex items-center gap-2 transition-colors duration-300 ${isScrolled ? 'text-brand-dark' : 'text-white'}`}>
           <span className="text-brand-gold italic drop-shadow-lg">Saigon</span>
@@ -176,7 +176,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow pt-0">
+      <main className="flex-grow pt-20 lg:pt-0">
         {children}
       </main>
       <Footer />
