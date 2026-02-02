@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden fixed inset-0 bg-brand-nude z-[60] transition-transform duration-500 transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8 text-center px-6">
+      <div className={`lg:hidden fixed inset-0 bg-brand-nude/100 z-[60] transition-transform duration-500 transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex flex-col items-center justify-center h-full space-y-8 text-center px-6 relative z-10">
           <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-6 right-6 p-2">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
@@ -186,14 +186,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         href={getWhatsAppBookingLink()}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-50 bg-green-500 text-white p-3 rounded-full shadow-2xl hover-lift"
+        className="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-40 bg-green-500 text-white p-3 rounded-full shadow-2xl hover-lift"
         aria-label="WhatsApp Booking"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.296 0-4.289 1.583-4.834 3.955-.024.113-.147.214-.242.214H5.416c-.292 0-.528.236-.528.528v.241c0 .292.236.528.528.528h1.539c.095 0 .218.101.242.214.545 2.372 2.538 3.955 4.834 3.955 2.296 0 4.289-1.583 4.834-3.955.024-.113.147-.214.242-.214h1.539c.292 0 .528-.236.528-.528v-.241c0-.292-.236-.528-.528-.528h-1.539c-.095 0-.218-.101-.242-.214-.545-2.372-2.538-3.955-4.834-3.955z"/><path d="M12.012 2c-5.514 0-10 4.486-10 10s4.486 10 10 10c1.855 0 3.584-.509 5.062-1.402l4.926 1.402-1.402-4.926c.893-1.478 1.402-3.207 1.402-5.062 0-5.514-4.486-10-10-10zm0 18.286c-1.637 0-3.178-.457-4.499-1.25l-.323-.195-3.337.95.95-3.337-.195-.323c-.793-1.321-1.25-2.862-1.25-4.499 0-4.568 3.718-8.286 8.286-8.286s8.286 3.718 8.286 8.286-3.718 8.286-8.286 8.286z"/></svg>
       </a>
 
       {/* Sticky Bottom Booking for Mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 glass-effect p-4 border-t border-brand-accent/30">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 glass-effect p-4 border-t border-brand-accent/30">
         <Link 
           to="/booking" 
           className="block w-full bg-brand-gold text-white text-center py-4 text-xs uppercase tracking-widest font-bold"
