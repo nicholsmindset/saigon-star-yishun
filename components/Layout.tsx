@@ -67,31 +67,51 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`lg:hidden fixed inset-0 bg-brand-nude/100 z-[60] transition-transform duration-500 transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8 text-center px-6 relative z-10">
-          <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-6 right-6 p-2">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
-          </button>
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-serif text-brand-dark hover:text-brand-gold"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link 
-            to="/booking" 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="w-full max-w-xs bg-brand-gold text-white py-4 text-sm uppercase tracking-widest font-bold"
-          >
-            Book Appointment
-          </Link>
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 bg-brand-nude z-[60] overflow-y-auto">
+          <div className="min-h-screen flex flex-col">
+            {/* Close Button */}
+            <div className="flex justify-end p-6">
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-3 text-brand-dark hover:text-brand-gold transition-colors"
+                aria-label="Close menu"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Menu Content */}
+            <div className="flex-1 flex flex-col items-center justify-center px-8 pb-20 space-y-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-3xl font-serif transition-colors ${
+                    location.pathname === link.path
+                      ? 'text-brand-gold'
+                      : 'text-brand-dark hover:text-brand-gold'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <Link
+                to="/booking"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mt-8 w-full max-w-sm bg-brand-gold text-white text-center py-5 px-8 text-base uppercase tracking-widest font-bold hover:bg-brand-dark transition-colors"
+              >
+                Book Appointment
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
