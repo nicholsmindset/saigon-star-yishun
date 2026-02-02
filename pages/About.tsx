@@ -11,10 +11,10 @@ const About: React.FC = () => {
           <div>
             <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Our Story</span>
             <h1 className="text-5xl font-serif text-brand-dark mb-8 leading-tight">Authentic Artistry <br />at Saigon Star</h1>
-            <p className="text-brand-dark/70 text-lg font-light leading-relaxed mb-8">
+            <p className="text-brand-dark/90 text-lg font-light leading-relaxed mb-8">
               Located in the heart of Yishun Street 22, Saigon Star has built a reputation for providing elite lash and nail services with a personal touch. 
             </p>
-            <p className="text-brand-dark/70 text-lg font-light leading-relaxed">
+            <p className="text-brand-dark/90 text-lg font-light leading-relaxed">
               Our technicians specialize in the detailed, intricate work that defines modern Asian beauty trends. From high-retention eyelash extensions to hand-painted nail art that tells a story, we are dedicated to making every visit a transformative experience.
             </p>
           </div>
@@ -34,15 +34,15 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
             <div>
               <h3 className="text-brand-gold font-serif text-3xl mb-4 italic">Precision</h3>
-              <p className="text-xs text-brand-dark/60 leading-relaxed tracking-wider uppercase">We believe beauty is in the smallest details.</p>
+              <p className="text-xs text-brand-dark/80 leading-relaxed tracking-wider uppercase">We believe beauty is in the smallest details.</p>
             </div>
             <div>
               <h3 className="text-brand-gold font-serif text-3xl mb-4 italic">Retention</h3>
-              <p className="text-xs text-brand-dark/60 leading-relaxed tracking-wider uppercase">Using only premium adhesives and techniques for lasting results.</p>
+              <p className="text-xs text-brand-dark/80 leading-relaxed tracking-wider uppercase">Using only premium adhesives and techniques for lasting results.</p>
             </div>
             <div>
               <h3 className="text-brand-gold font-serif text-3xl mb-4 italic">Comfort</h3>
-              <p className="text-xs text-brand-dark/60 leading-relaxed tracking-wider uppercase">A relaxing studio designed for your peace of mind.</p>
+              <p className="text-xs text-brand-dark/80 leading-relaxed tracking-wider uppercase">A relaxing studio designed for your peace of mind.</p>
             </div>
           </div>
         </section>
@@ -65,8 +65,8 @@ const About: React.FC = () => {
                   />
                 </div>
                 <h4 className="text-xl font-serif text-brand-dark mb-1">{member.name}</h4>
-                <p className="text-brand-gold text-[10px] uppercase tracking-[0.2em] font-bold mb-4">{member.role}</p>
-                <p className="text-sm text-brand-dark/60 leading-relaxed">{member.bio}</p>
+                <p className="text-brand-gold text-xs uppercase tracking-[0.2em] font-bold mb-4">{member.role}</p>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>

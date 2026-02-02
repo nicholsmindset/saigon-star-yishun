@@ -89,7 +89,7 @@ const Reviews: React.FC = () => {
             Social Proof
           </span>
           <h1 className="text-5xl font-serif text-brand-dark mb-6">What Our Clients Say</h1>
-          <p className="text-brand-dark/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-brand-dark/80 max-w-2xl mx-auto leading-relaxed">
             Join {REVIEW_STATS.totalReviews} happy clients who trust Saigon Star for their beauty needs
           </p>
         </header>
@@ -104,7 +104,7 @@ const Reviews: React.FC = () => {
                   <span className="text-6xl font-bold text-brand-dark">
                     {REVIEW_STATS.averageRating}
                   </span>
-                  <span className="text-2xl text-brand-dark/40">/ 5.0</span>
+                  <span className="text-2xl text-brand-dark/60">/ 5.0</span>
                 </div>
                 <div className="flex gap-1 mb-3 justify-center md:justify-start">
                   {[...Array(5)].map((_, i) => (
@@ -117,7 +117,7 @@ const Reviews: React.FC = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm text-brand-dark/60">
+                <p className="text-sm text-brand-dark/80">
                   Based on <span className="font-bold text-brand-gold">{REVIEW_STATS.totalReviews}</span> reviews
                 </p>
               </div>
@@ -141,7 +141,7 @@ const Reviews: React.FC = () => {
                           style={{ width: `${percentage}%` }}
                         ></div>
                       </div>
-                      <span className="text-xs text-brand-dark/40 w-12 text-right">
+                      <span className="text-xs text-brand-dark/70 w-12 text-right">
                         {item.count}
                       </span>
                     </div>
@@ -191,7 +191,7 @@ const Reviews: React.FC = () => {
               </div>
 
               {/* Review Text */}
-              <p className="text-brand-dark/70 leading-relaxed mb-6 text-sm">
+              <p className="text-brand-dark/90 leading-relaxed mb-6 text-sm">
                 "{review.text}"
               </p>
 
@@ -199,7 +199,7 @@ const Reviews: React.FC = () => {
               <div className="flex items-center justify-between pt-6 border-t border-brand-accent/20">
                 <div>
                   <p className="font-bold text-sm text-brand-dark">{review.author}</p>
-                  <p className="text-xs text-brand-dark/40">{review.date}</p>
+                  <p className="text-xs text-brand-dark/70">{review.date}</p>
                 </div>
                 {review.verified && (
                   <div className="flex items-center gap-1 text-brand-gold text-xs">
@@ -219,7 +219,7 @@ const Reviews: React.FC = () => {
           <h2 className="text-3xl font-serif text-brand-dark mb-6">
             Experience the Saigon Star Difference
           </h2>
-          <p className="text-brand-dark/60 mb-8 leading-relaxed">
+          <p className="text-brand-dark/80 mb-8 leading-relaxed">
             Join hundreds of satisfied clients who trust us for premium nail and lash services.
             Book your appointment today and see why we're Yishun's top-rated beauty salon.
           </p>
@@ -251,7 +251,7 @@ const Reviews: React.FC = () => {
           ].map((badge, i) => (
             <div key={i} className="text-center p-6 bg-white shadow-lg">
               <p className="text-3xl font-bold text-brand-gold mb-2">{badge.label}</p>
-              <p className="text-xs uppercase tracking-widest text-brand-dark/60">
+              <p className="text-xs uppercase tracking-widest text-brand-dark/80">
                 {badge.subtitle}
               </p>
             </div>

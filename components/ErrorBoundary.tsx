@@ -95,7 +95,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Oops! Something went wrong
               </h1>
 
-              <p className="text-brand-dark/60 mb-8 leading-relaxed">
+              <p className="text-brand-dark/80 mb-8 leading-relaxed">
                 We're sorry for the inconvenience. An unexpected error occurred while loading this page.
                 Please try refreshing, or return to our homepage.
               </p>
@@ -137,10 +137,10 @@ class ErrorBoundary extends Component<Props, State> {
 
               {/* Support Information */}
               <div className="mt-12 pt-8 border-t border-brand-accent">
-                <p className="text-xs text-brand-dark/40 uppercase tracking-widest mb-2">
+                <p className="text-xs text-brand-dark/70 uppercase tracking-widest mb-2">
                   Need Help?
                 </p>
-                <p className="text-sm text-brand-dark/60">
+                <p className="text-sm text-brand-dark/80">
                   Contact us at{' '}
                   <a
                     href="tel:+6582926388"

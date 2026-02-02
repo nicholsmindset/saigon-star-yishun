@@ -126,7 +126,7 @@ const Footer: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
           <h2 className="text-2xl font-serif font-bold mb-6 tracking-widest text-brand-gold italic">Saigon Star</h2>
-          <p className="text-brand-blush/70 text-sm leading-relaxed mb-6">
+          <p className="text-brand-blush/90 text-sm leading-relaxed mb-6">
             Premier lash and nail artistry in Yishun. We combine meticulous technique with premium materials for results that speak for themselves.
           </p>
           <div className="flex space-x-4">
@@ -137,7 +137,7 @@ const Footer: React.FC = () => (
         
         <div>
           <h3 className="text-xs uppercase tracking-[0.2em] font-bold mb-6 text-brand-gold">Opening Hours</h3>
-          <ul className="text-sm space-y-3 text-brand-blush/70">
+          <ul className="text-sm space-y-3 text-brand-blush/90">
             <li className="flex justify-between">
               <span>{BUSINESS_CONFIG.hours.weekday.days}</span>
               <span>{BUSINESS_CONFIG.hours.weekday.open} - {BUSINESS_CONFIG.hours.weekday.close}</span>
@@ -151,7 +151,7 @@ const Footer: React.FC = () => (
 
         <div>
           <h3 className="text-xs uppercase tracking-[0.2em] font-bold mb-6 text-brand-gold">Location</h3>
-          <ul className="text-sm space-y-3 text-brand-blush/70">
+          <ul className="text-sm space-y-3 text-brand-blush/90">
             <li>{BUSINESS_CONFIG.location.address}</li>
             <li>{BUSINESS_CONFIG.location.unit}, {BUSINESS_CONFIG.location.city} {BUSINESS_CONFIG.location.postalCode}</li>
             <li>
@@ -169,26 +169,26 @@ const Footer: React.FC = () => (
 
         <div>
           <h3 className="text-xs uppercase tracking-[0.2em] font-bold mb-6 text-brand-gold">Our Ethos</h3>
-          <p className="text-xs text-brand-blush/60 leading-relaxed">
+          <p className="text-xs text-brand-blush/80 leading-relaxed">
             Professional. Clean. Artisan. We prioritize your comfort and lash health above all else.
           </p>
         </div>
       </div>
       <div className="border-t border-white/10 pt-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-white/30">
+          <p className="text-xs uppercase tracking-[0.3em] text-white/60">
             © {new Date().getFullYear()} {BUSINESS_CONFIG.name}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-[10px] uppercase tracking-wider">
-            <Link to="/privacy-policy" className="text-white/40 hover:text-brand-gold transition-colors">
+          <div className="flex gap-6 text-xs uppercase tracking-wider">
+            <Link to="/privacy-policy" className="text-white/60 hover:text-brand-gold transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms-of-service" className="text-white/40 hover:text-brand-gold transition-colors">
+            <Link to="/terms-of-service" className="text-white/60 hover:text-brand-gold transition-colors">
               Terms of Service
             </Link>
           </div>
         </div>
-        <p className="text-center text-[9px] text-white/20 mt-4">
+        <p className="text-center text-[11px] text-white/50 mt-4">
           Built with care for premium beauty experiences
         </p>
       </div>

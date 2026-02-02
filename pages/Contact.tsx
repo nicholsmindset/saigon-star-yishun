@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
             <div>
               <h3 className="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4">Location</h3>
               <p className="text-xl font-serif text-brand-dark mb-2">{BUSINESS_CONFIG.location.address}</p>
-              <p className="text-brand-dark/60 text-sm">{BUSINESS_CONFIG.location.unit}<br />{BUSINESS_CONFIG.location.city} {BUSINESS_CONFIG.location.postalCode}</p>
+              <p className="text-brand-dark/80 text-sm">{BUSINESS_CONFIG.location.unit}<br />{BUSINESS_CONFIG.location.city} {BUSINESS_CONFIG.location.postalCode}</p>
             </div>
 
             <div>
@@ -26,12 +26,12 @@ const Contact: React.FC = () => {
               <a href={getPhoneCallLink()} className="text-xl font-serif text-brand-dark mb-2 block hover:text-brand-gold transition-colors">
                 {BUSINESS_CONFIG.contact.phoneDisplay}
               </a>
-              <p className="text-brand-dark/60 text-sm">Direct message us on Facebook or WhatsApp for immediate bookings.</p>
+              <p className="text-brand-dark/80 text-sm">Direct message us on Facebook or WhatsApp for immediate bookings.</p>
             </div>
 
             <div>
               <h3 className="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4">Studio Hours</h3>
-              <div className="space-y-2 text-sm text-brand-dark/70">
+              <div className="space-y-2 text-sm text-brand-dark/90">
                 <div className="flex justify-between w-full max-w-[16rem] border-b border-brand-accent pb-2">
                   <span>{BUSINESS_CONFIG.hours.weekday.days}</span>
                   <span className="font-bold">{BUSINESS_CONFIG.hours.weekday.open} - {BUSINESS_CONFIG.hours.weekday.close}</span>
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                 href={getWhatsAppBookingLink()} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-dark text-white px-10 py-5 text-[10px] uppercase tracking-widest font-bold hover:bg-brand-gold transition-colors block text-center lg:inline-block shadow-lg"
+                className="bg-brand-dark text-white px-10 py-5 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold transition-colors block text-center lg:inline-block shadow-lg"
               >
                 WhatsApp Booking
               </a>
@@ -61,17 +61,17 @@ const Contact: React.FC = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 block">Name</label>
+                  <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 block">Name</label>
                   <input type="text" className="w-full border-b border-brand-accent/40 py-2 outline-none focus:border-brand-gold text-sm bg-transparent transition-colors" placeholder="Your name" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 block">Mobile Number</label>
+                  <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 block">Mobile Number</label>
                   <input type="tel" className="w-full border-b border-brand-accent/40 py-2 outline-none focus:border-brand-gold text-sm bg-transparent transition-colors" placeholder="+65" />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 block">Service of Interest</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 block">Service of Interest</label>
                 <select className="w-full border-b border-brand-accent/40 py-2 outline-none focus:border-brand-gold text-sm bg-transparent appearance-none transition-colors">
                   <option value="">Select a service...</option>
                   {SERVICES.map(s => (
@@ -84,13 +84,13 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 block">Your Message</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 block">Your Message</label>
                 <textarea rows={3} className="w-full border-b border-brand-accent/40 py-2 outline-none focus:border-brand-gold text-sm resize-none bg-transparent transition-colors" placeholder="Tell us more about your request..."></textarea>
               </div>
               <button 
                 type="button"
                 onClick={() => alert("Enquiry submitted! Our concierge will reach out via WhatsApp/Phone soon.")}
-                className="w-full bg-brand-gold text-white py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-brand-dark transition-all duration-300 shadow-lg"
+                className="w-full bg-brand-gold text-white py-4 text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-dark transition-all duration-300 shadow-lg"
               >
                 Send Message
               </button>

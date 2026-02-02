@@ -63,7 +63,7 @@ const Gallery: React.FC = () => {
         <header className="text-center mb-16">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Visual Excellence</span>
           <h1 className="text-5xl font-serif text-brand-dark mb-6 tracking-tight">Curated Showcase</h1>
-          <p className="text-brand-dark/50 max-w-xl mx-auto text-sm font-light mb-10">
+          <p className="text-brand-dark/80 max-w-xl mx-auto text-sm font-light mb-10">
             A selection of our most intricate nail art and transformative lash sets, handpicked to inspire your next look.
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 border-y border-brand-accent/30 py-4">
@@ -71,7 +71,7 @@ const Gallery: React.FC = () => {
                <button
                 key={t}
                 onClick={() => setFilter(t)}
-                className={`text-[11px] sm:text-[10px] uppercase tracking-[0.25em] font-bold transition-all duration-300 py-3 px-4 min-h-[44px] ${filter === t ? 'text-brand-gold scale-110' : 'text-brand-dark/40 active:text-brand-dark'}`}
+                className={`text-xs uppercase tracking-[0.25em] font-bold transition-all duration-300 py-3 px-4 min-h-[44px] ${filter === t ? 'text-brand-gold scale-110' : 'text-brand-dark/70 active:text-brand-dark'}`}
                >
                  {t}
                </button>
@@ -91,7 +91,7 @@ const Gallery: React.FC = () => {
                 />
               </div>
               <div className="absolute inset-4 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 border border-white/20">
-                <span className="text-white text-[10px] uppercase tracking-[0.3em] font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{img.type} Edition</span>
+                <span className="text-white text-xs uppercase tracking-[0.3em] font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{img.type} Edition</span>
                 <p className="text-white/80 text-xs italic font-serif translate-y-4 group-hover:translate-y-0 transition-transform duration-700 delay-100">Exclusively at Saigon Star</p>
               </div>
             </div>
@@ -116,7 +116,7 @@ const Gallery: React.FC = () => {
               href="https://www.instagram.com/saigonstarss/" 
               target="_blank" 
               rel="noreferrer" 
-              className="mt-6 md:mt-0 inline-block bg-brand-dark text-white px-10 py-4 text-[10px] uppercase tracking-widest font-bold hover:bg-brand-gold transition-all duration-300"
+              className="mt-6 md:mt-0 inline-block bg-brand-dark text-white px-10 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold transition-all duration-300"
             >
               Follow Us
             </a>
@@ -152,7 +152,7 @@ const Gallery: React.FC = () => {
           </div>
           
           <div className="mt-16 text-center">
-             <p className="text-brand-dark/40 text-[10px] uppercase tracking-[0.4em] mb-4">Discover the Saigon Star Lifestyle</p>
+             <p className="text-brand-dark/70 text-xs uppercase tracking-[0.4em] mb-4">Discover the Saigon Star Lifestyle</p>
              <div className="w-12 h-[1px] bg-brand-gold mx-auto mb-8"></div>
           </div>
         </section>

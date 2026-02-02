@@ -37,7 +37,7 @@ const Booking: React.FC = () => {
                     <span className="font-bold text-xs uppercase tracking-widest">{s.name}</span>
                     <span className="text-brand-gold font-bold">{s.price}</span>
                   </div>
-                  <p className="text-[10px] text-brand-dark/40 mt-1">{s.duration}</p>
+                  <p className="text-xs text-brand-dark/70 mt-1">{s.duration}</p>
                 </button>
               ))}
             </div>
@@ -66,7 +66,7 @@ const Booking: React.FC = () => {
                 </button>
               ))}
             </div>
-            <button onClick={prevStep} className="text-[10px] uppercase tracking-widest text-brand-dark/40 block mx-auto pt-4 underline">Back to Services</button>
+            <button onClick={prevStep} className="text-xs uppercase tracking-widest text-brand-dark/70 block mx-auto pt-4 underline">Back to Services</button>
           </div>
         );
       case 3:
@@ -75,7 +75,7 @@ const Booking: React.FC = () => {
             <h3 className="text-xl font-serif text-brand-dark mb-8 text-center">Date & Time</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 mb-4 block">Select Date</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 mb-4 block">Select Date</label>
                 <input 
                   type="date" 
                   className="w-full border border-brand-accent/30 p-4 text-sm outline-none focus:border-brand-gold"
@@ -83,13 +83,13 @@ const Booking: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 mb-4 block">Preferred Time</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/70 mb-4 block">Preferred Time</label>
                 <div className="grid grid-cols-3 gap-2">
                   {['11:00', '12:30', '14:00', '15:30', '17:00', '18:30'].map(t => (
                     <button
                       key={t}
                       onClick={() => handleBooking('time', t)}
-                      className={`p-2 border text-[10px] font-bold ${bookingData.time === t ? 'bg-brand-gold text-white' : 'border-brand-accent/30'}`}
+                      className={`p-2 border text-xs font-bold ${bookingData.time === t ? 'bg-brand-gold text-white' : 'border-brand-accent/30'}`}
                     >
                       {t}
                     </button>
@@ -100,11 +100,11 @@ const Booking: React.FC = () => {
             <button 
               disabled={!bookingData.date || !bookingData.time}
               onClick={nextStep}
-              className="w-full bg-brand-dark text-white py-4 text-[10px] uppercase tracking-widest font-bold mt-8 disabled:opacity-20"
+              className="w-full bg-brand-dark text-white py-4 text-xs uppercase tracking-widest font-bold mt-8 disabled:opacity-30"
             >
               Continue
             </button>
-            <button onClick={prevStep} className="text-[10px] uppercase tracking-widest text-brand-dark/40 block mx-auto underline">Back to Staff</button>
+            <button onClick={prevStep} className="text-xs uppercase tracking-widest text-brand-dark/70 block mx-auto underline">Back to Staff</button>
           </div>
         );
       case 4:
@@ -112,7 +112,7 @@ const Booking: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-serif text-brand-dark mb-8 text-center">Almost Done</h3>
             <div className="bg-brand-blush/20 p-6 mb-8">
-              <p className="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-4">Your Summary</p>
+              <p className="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4">Your Summary</p>
               <div className="space-y-2 text-sm">
                 <p className="flex justify-between"><span>Service:</span> <span className="font-bold">{bookingData.service}</span></p>
                 <p className="flex justify-between"><span>Artist:</span> <span className="font-bold">{bookingData.staff}</span></p>
@@ -134,12 +134,12 @@ const Booking: React.FC = () => {
               />
             </div>
             <button 
-              className="w-full bg-brand-gold text-white py-5 text-[10px] uppercase tracking-[0.2em] font-bold mt-8"
+              className="w-full bg-brand-gold text-white py-5 text-xs uppercase tracking-[0.2em] font-bold mt-8"
               onClick={() => alert("Booking Sent! We will contact you shortly to confirm.")}
             >
               Confirm Appointment
             </button>
-            <button onClick={prevStep} className="text-[10px] uppercase tracking-widest text-brand-dark/40 block mx-auto underline">Edit Details</button>
+            <button onClick={prevStep} className="text-xs uppercase tracking-widest text-brand-dark/70 block mx-auto underline">Edit Details</button>
           </div>
         );
     }
@@ -154,13 +154,13 @@ const Booking: React.FC = () => {
           
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-gold">Online Concierge</h2>
-            <span className="text-[10px] text-brand-dark/30 font-bold uppercase tracking-widest">Step {step} / 4</span>
+            <span className="text-xs text-brand-dark/60 font-bold uppercase tracking-widest">Step {step} / 4</span>
           </div>
 
           {renderStep()}
         </div>
 
-        <div className="mt-12 text-center text-brand-dark/40 text-[10px] uppercase tracking-widest font-bold">
+        <div className="mt-12 text-center text-brand-dark/70 text-xs uppercase tracking-widest font-bold">
            Need help booking? Call us at <span className="text-brand-dark">+65 8292 6388</span>
         </div>
       </div>

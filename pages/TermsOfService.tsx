@@ -10,12 +10,12 @@ const TermsOfService: React.FC = () => {
             Legal Information
           </span>
           <h1 className="text-5xl font-serif text-brand-dark mb-6">Terms of Service</h1>
-          <p className="text-brand-dark/60 text-sm">
+          <p className="text-brand-dark/80 text-sm">
             Last Updated: February 1, 2026
           </p>
         </header>
 
-        <div className="bg-white p-12 shadow-lg space-y-8 text-brand-dark/80">
+        <div className="bg-white p-12 shadow-lg space-y-8 text-brand-dark/90">
           <section>
             <h2 className="text-2xl font-serif text-brand-dark mb-4">1. Acceptance of Terms</h2>
             <p className="leading-relaxed">
@@ -216,7 +216,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section className="border-t border-brand-accent pt-8">
-            <p className="text-sm text-brand-dark/60 italic">
+            <p className="text-sm text-brand-dark/80 italic">
               By booking and receiving services at {BUSINESS_CONFIG.name}, you acknowledge that you
               have read, understood, and agree to these Terms of Service.
             </p>

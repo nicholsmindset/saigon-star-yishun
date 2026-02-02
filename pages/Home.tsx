@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/70 text-sm">
+          <div className="mt-12 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/90 text-sm">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -75,8 +75,8 @@ const Home: React.FC = () => {
 
         {/* Scroll Indicator - raised on mobile to clear sticky bar */}
         <div className="absolute bottom-24 lg:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-white/60 text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-[1px] h-8 lg:h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
+          <span className="text-white/80 text-xs uppercase tracking-widest">Scroll</span>
+          <div className="w-[1px] h-8 lg:h-12 bg-gradient-to-b from-white/80 to-transparent"></div>
         </div>
       </section>
 
@@ -101,12 +101,12 @@ const Home: React.FC = () => {
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-xl font-serif mb-4 text-brand-dark">{service.name}</h3>
-                  <p className="text-sm text-brand-dark/60 mb-8 leading-relaxed">
+                  <p className="text-sm text-brand-dark/80 mb-8 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="flex justify-between items-center border-t border-brand-accent pt-6">
                     <span className="text-brand-gold font-bold">{service.price}</span>
-                    <Link to="/booking" className="text-[10px] uppercase tracking-widest font-bold text-brand-dark hover:text-brand-gold">
+                    <Link to="/booking" className="text-xs uppercase tracking-widest font-bold text-brand-dark hover:text-brand-gold">
                       Book Now
                     </Link>
                   </div>
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
           <div>
             <span className="text-brand-gold uppercase tracking-widest text-xs font-bold mb-4 block">The Saigon Star Standard</span>
             <h2 className="text-4xl font-serif text-brand-dark mb-8 leading-tight">Elite Artistry <br />for Every Occasion</h2>
-            <p className="text-brand-dark/70 mb-10 leading-relaxed text-lg font-light">
+            <p className="text-brand-dark/90 mb-10 leading-relaxed text-lg font-light">
               Our studio is more than just a beauty salon; it's a dedicated creative space. We specialize in complex, high-retention services that survive the hustle and bustle of Singapore life while looking absolutely flawless.
             </p>
             <div className="space-y-6">
@@ -147,10 +147,10 @@ const Home: React.FC = () => {
                 { title: 'Weightless Extensions', desc: 'Lashes so light you\'ll forget they are there, with retention up to 6 weeks.' }
               ].map((item, i) => (
                 <div key={i} className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full border border-brand-gold flex items-center justify-center text-brand-gold text-[10px] shrink-0 mt-1">✓</div>
+                  <div className="w-6 h-6 rounded-full border border-brand-gold flex items-center justify-center text-brand-gold text-xs shrink-0 mt-1">✓</div>
                   <div>
                     <h4 className="font-bold text-sm uppercase tracking-wider mb-1">{item.title}</h4>
-                    <p className="text-xs text-brand-dark/60">{item.desc}</p>
+                    <p className="text-xs text-brand-dark/80">{item.desc}</p>
                   </div>
                 </div>
               ))}
