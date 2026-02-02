@@ -26,7 +26,7 @@ const Booking: React.FC = () => {
         return (
           <div className="space-y-6">
             <h3 className="text-xl font-serif text-brand-dark mb-8 text-center">Select Your Experience</h3>
-            <div className="grid grid-cols-1 gap-4 max-h-[400px] overflow-y-auto px-2">
+            <div className="grid grid-cols-1 gap-4 px-2">
               {SERVICES.map(s => (
                 <button
                   key={s.id}
@@ -146,7 +146,7 @@ const Booking: React.FC = () => {
   };
 
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6 max-w-2xl">
         <div className="bg-white shadow-2xl p-8 md:p-12 relative overflow-hidden">
           {/* Progress Bar */}

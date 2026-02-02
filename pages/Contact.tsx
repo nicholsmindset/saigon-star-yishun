@@ -5,7 +5,7 @@ import { BUSINESS_CONFIG, getWhatsAppBookingLink, getPhoneCallLink, getFormatted
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6">
         <header className="text-center mb-20">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Connect with Saigon Star</span>
@@ -32,11 +32,11 @@ const Contact: React.FC = () => {
             <div>
               <h3 className="text-xs uppercase tracking-widest font-bold text-brand-gold mb-4">Studio Hours</h3>
               <div className="space-y-2 text-sm text-brand-dark/70">
-                <div className="flex justify-between w-64 border-b border-brand-accent pb-2">
+                <div className="flex justify-between w-full max-w-[16rem] border-b border-brand-accent pb-2">
                   <span>{BUSINESS_CONFIG.hours.weekday.days}</span>
                   <span className="font-bold">{BUSINESS_CONFIG.hours.weekday.open} - {BUSINESS_CONFIG.hours.weekday.close}</span>
                 </div>
-                <div className="flex justify-between w-64 border-b border-brand-accent pb-2">
+                <div className="flex justify-between w-full max-w-[16rem] border-b border-brand-accent pb-2">
                   <span>{BUSINESS_CONFIG.hours.weekend.days}</span>
                   <span className="font-bold">{BUSINESS_CONFIG.hours.weekend.open} - {BUSINESS_CONFIG.hours.weekend.close}</span>
                 </div>

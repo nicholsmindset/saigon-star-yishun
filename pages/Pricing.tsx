@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
   return (
-    <div className="bg-white pt-32 pb-24 min-h-screen">
+    <div className="bg-white pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6 max-w-4xl">
         <header className="text-center mb-20">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Transparent Pricing</span>

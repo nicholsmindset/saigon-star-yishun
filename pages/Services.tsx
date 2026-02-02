@@ -14,7 +14,7 @@ const Services: React.FC = () => {
   const categories = ['All', ...Object.values(ServiceCategory)];
 
   return (
-    <div className="bg-brand-nude pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-nude pt-32 pb-32 lg:pb-24 min-h-screen">
       <div className="container mx-auto px-6">
         <header className="text-center mb-16">
           <span className="text-brand-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Our Curated Menu</span>
@@ -24,13 +24,13 @@ const Services: React.FC = () => {
           </p>
         </header>
 
-        {/* Filter Bar */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        {/* Filter Bar - mobile touch-friendly */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-16">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat as any)}
-              className={`px-6 py-2 text-[10px] uppercase tracking-widest font-bold transition-all border-b-2 ${activeCategory === cat ? 'border-brand-gold text-brand-gold' : 'border-transparent text-brand-dark/40 hover:text-brand-dark'}`}
+              className={`px-5 py-3 text-[11px] sm:text-[10px] uppercase tracking-widest font-bold transition-all border-b-2 min-h-[44px] ${activeCategory === cat ? 'border-brand-gold text-brand-gold' : 'border-transparent text-brand-dark/40 active:text-brand-dark'}`}
             >
               {cat}
             </button>
